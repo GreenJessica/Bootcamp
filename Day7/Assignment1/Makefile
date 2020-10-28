@@ -1,4 +1,4 @@
-compiler = g++
+compiler=g++
 
 assignment1 : main.o 
 	$(compiler) main.o  -Llibrary -lShape -o assignment1
