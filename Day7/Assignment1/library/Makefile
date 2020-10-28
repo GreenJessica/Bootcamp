@@ -1,4 +1,4 @@
-cdcompiler = g++
+compiler=g++
 
 libShape : shape.o 
 	$(compiler) --shared -fPIC  shape.o -o libShape.so
