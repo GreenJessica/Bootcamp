@@ -1,0 +1,7 @@
+#!/bin/bash
+
+wget --output-document=replaceVolvo.html https://sv.wikipedia.org/wiki/Volvo_Personvagnar
+
+sed -i 's/Volvo/TheBestCompanyEver/g' replaceVolvo.html
+sed -i 's/volvo/theBestCompanyEver/g' replaceVolvo.html
+
