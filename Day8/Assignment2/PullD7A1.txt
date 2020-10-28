@@ -1,0 +1,40 @@
+#!/bin/bash
+
+# Place this script in the folder you want the Day7 Assignment1 cloned into and run the script by typing bash PullD7A1.txt.
+
+echo Enter your github username
+read userName
+
+echo Enter your email
+read email
+
+git init
+git config  user.name "$userName"
+git config  user.email "$email"
+
+git clone https://github.com/GreenJessica/Bootcamp.git
+
+cd Bootcamp/Day7/Assignment1/library
+
+make
+
+cd ..
+
+LD_LIBRARY_PATH="$(pwd)/library"
+export LD_LIBRARY_PATH
+
+make
+
+./assignment1
+
+
+
+
+
+
+
+
+
+
+
+
