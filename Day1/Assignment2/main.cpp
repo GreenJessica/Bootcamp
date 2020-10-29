@@ -5,12 +5,10 @@ int main() {
     int key;
     std::string CipherTxt;
 
-    do {
-        std::cout << "Please enter a cipher key between 0-26" <<std::endl;
-        std::cin >> key;
-    }
-    while (key < 0 || key > 26);
+    std::cout << "Please enter a cipher key between 0-26" <<std::endl;
+    do {std::cin >> key;}while (key < 0 || key > 26);
 
+    // TODO: Safeguard against nonCapitals?
     std::cout << "Please enter the cipher text in Capital letters" <<std::endl;
     std::cin >> CipherTxt;
 

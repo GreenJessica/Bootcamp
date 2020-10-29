@@ -8,22 +8,16 @@ int main() {
     srand(time(0));
 
     std::cout << "Please enter a positive number" <<std::endl;
-    std::cin >> randomMax;
+    do {std::cin >> randomMax;}while(randomMax<1);
 
     for (int i=0;i<8;i++) {
-        std::cout <<std::endl;
         for  (int j=0;j<9;j++) {
-            std::cout <<std::endl;
-
             for (int k=0;k<11;k++) {
-                do {
-                    positiveNumberArray[i][j][k] = rand();
-                }
-                while (positiveNumberArray[i][j][k] >= randomMax);
-
+                positiveNumberArray[i][j][k] = rand()%randomMax;
                 std::cout << "[" << i << "][" << j  << "][" << k <<"]: " <<positiveNumberArray[i][j][k] << "\t";
             }
+            std::cout <<std::endl;
         }
+        std::cout <<std::endl;
     } 
-    std::cout <<std::endl;
 }
